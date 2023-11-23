@@ -117,3 +117,32 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 
 ## Answers
 Please write your answers here
+
+1. b
+2. c
+3. d
+4. b
+5. a
+6. c
+7. a
+8. a
+9. d
+10. b
+11. c
+    
+14. System calls transition the execution from user mode to kernel, invoking operating system services while library functions are called within user space, without a change in privilege level.In xv6, examples of system calls include fork() and exit(). Examples of library functions include printf(), and scanf().
+    
+15.xv6 uses a paging mechanism to manage memory. It divides physical memory into fixed-size pages and virtual memory into corresponding pages.The Memory Management Unit translates virtual addresses to physical addresses using a page table.Memory paging in xv6 improves flexibility, isolation, and ease of management in memory allocation. It also facilitates advanced features like demand paging and virtual memory support.
+
+16.(a)ls: Lists the files and directories in the current directory.
+(b)cd: Changes the current working directory to the specified path.
+(c)cp: Copies files or directories from one location to another.
+
+17.Process synchronization is crucial to ensure proper and orderly execution of concurrent processes.It helps avoid data inconsistencies and maintain the integrity of shared resources.Some mechanisms used to achieve it are:
+-Semaphores: Used for signaling between processes and managing access to a resource with limited capacity.
+-Conditional Variables: Allows processes to wait for a specific condition to be true before proceeding.
+
+18.Interrupts play a crucial role in handling asynchronous events and improving system responsiveness.The xv6 kernel uses an Interrupt Vector Table to map interrupt numbers to corresponding interrupt service routines.Interrupts play a role in transitioning between kernel and user modes, allowing the operating system to respond to events that require kernel-level processing. It allows the system to be more responsive to events as they occur, contributing to a smoother and more efficient operation.
+
+19. Virtual memory is a memory management technique that provides an idealized version of the storage resources that are actually available on a given machine.xv6 uses a demand-paging mechanism, where not all of a process's memory needs to be in physical memory at all times. Pages of memory are swapped between physical memory and disk as needed.SOme advantages of virtual memory are:
+Increased Address Space,Ease of Memory Management,Flexible Memory Allocation and Efficient Use of Physical Memory.
