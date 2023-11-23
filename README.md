@@ -130,6 +130,12 @@ Please write your answers here
 10. b
 11. c
     
+12.Running: The process is currently being executed by the CPU.
+Runnable (Ready): The process is not currently executing, but it is ready to run and waiting for the CPU to be assigned to it.
+Sleeping (Blocked): The process is not currently running, and it is waiting for an event or resource to become available.
+
+13.There are three types of files in the XV6 system: inodes, blocks, and groups. The data itself is stored in blocks, and information about files is stored in inodes. Folders link file names to inode numbers.
+ 
 14. System calls transition the execution from user mode to kernel, invoking operating system services while library functions are called within user space, without a change in privilege level.In xv6, examples of system calls include fork() and exit(). Examples of library functions include printf(), and scanf().
     
 15.xv6 uses a paging mechanism to manage memory. It divides physical memory into fixed-size pages and virtual memory into corresponding pages.The Memory Management Unit translates virtual addresses to physical addresses using a page table.Memory paging in xv6 improves flexibility, isolation, and ease of management in memory allocation. It also facilitates advanced features like demand paging and virtual memory support.
@@ -146,3 +152,5 @@ Please write your answers here
 
 19. Virtual memory is a memory management technique that provides an idealized version of the storage resources that are actually available on a given machine.xv6 uses a demand-paging mechanism, where not all of a process's memory needs to be in physical memory at all times. Pages of memory are swapped between physical memory and disk as needed.SOme advantages of virtual memory are:
 Increased Address Space,Ease of Memory Management,Flexible Memory Allocation and Efficient Use of Physical Memory.
+
+20. The BIOS or UEFI software sets up the hardware, loads the bootloader (like GRUB), and then loads the XV6 kernel into memory. The kernel then takes over, sets up the data structures it needs, and starts the process of setup. It goes to the user area and starts the shell in the end.
